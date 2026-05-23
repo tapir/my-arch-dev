@@ -35,6 +35,9 @@ RUN pacman -Syu --noconfirm && \
         wget \
         procps-ng \
         util-linux \
+        sqlc \
+        gopls\
+        typescript-language-server \
         tzdata && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
@@ -49,7 +52,9 @@ WORKDIR /home/builder
 
 RUN yay -S --noconfirm --answerdiff None --answerclean None \
         crush-bin \
-        bun-bin && \
+        rtk \
+        playwright-cli \
+        tern && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
 
