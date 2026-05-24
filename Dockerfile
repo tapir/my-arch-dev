@@ -38,6 +38,16 @@ RUN pacman -Syu --noconfirm && \
         sqlc \
         gopls\
         typescript-language-server \
+        cpio \
+        unzip \
+        rsync \
+        bc \
+        ncurses \
+        python \
+        dtc \
+        swig \
+        python-setuptools \
+        python-pyelftools \
         tzdata && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
