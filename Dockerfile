@@ -48,9 +48,9 @@ RUN pacman -Syu --noconfirm && \
         swig \
         python-setuptools \
         python-pyelftools \
-        tzdata && \
-        godot && \
-        sqlite && \
+        tzdata \
+        godot \
+        sqlite \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
