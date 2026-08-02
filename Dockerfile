@@ -51,8 +51,6 @@ RUN pacman -Syu --noconfirm && \
         tzdata \
         godot \
         sqlite \
-        elmerfem \
-        gmsh-bin \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
@@ -69,6 +67,8 @@ RUN yay -S --noconfirm --answerdiff None --answerclean None \
         crush-bin \
         rtk \
         playwright-cli \
+        elmerfem \
+        gmsh-bin \
         tern && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
