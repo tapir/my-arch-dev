@@ -53,6 +53,7 @@ RUN pacman -Syu --noconfirm && \
         sqlite \
         blender \
         wl-clipboard \
+        uv \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
