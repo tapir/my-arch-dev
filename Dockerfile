@@ -51,6 +51,8 @@ RUN pacman -Syu --noconfirm && \
         tzdata \
         godot \
         sqlite \
+        blender \
+        wl-clipboard \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
