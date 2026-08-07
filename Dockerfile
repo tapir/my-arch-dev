@@ -56,7 +56,6 @@ RUN pacman -Syu --noconfirm && \
         uv \
         cppcheck \
         clang \
-        gsl \
         vulkan-icd-loader \
         vulkan-tools mesa-utils \
         python-pip && \
@@ -75,8 +74,6 @@ RUN yay -S --noconfirm --answerdiff None --answerclean None \
         crush-bin \
         rtk \
         playwright-cli \
-        elmerfem \
-        gmsh-bin \
         tern && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
