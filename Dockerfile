@@ -54,6 +54,8 @@ RUN pacman -Syu --noconfirm && \
         blender \
         wl-clipboard \
         uv \
+        vulkan-icd-loader \
+        vulkan-tools mesa-utils \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
