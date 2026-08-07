@@ -54,6 +54,9 @@ RUN pacman -Syu --noconfirm && \
         blender \
         wl-clipboard \
         uv \
+        cppcheck \
+        clang \
+        gsl \
         vulkan-icd-loader \
         vulkan-tools mesa-utils \
         python-pip && \
