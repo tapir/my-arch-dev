@@ -60,6 +60,7 @@ RUN pacman -Syu --noconfirm && \
         vulkan-tools mesa-utils \
         vulkan-radeon \
         scons \
+        mingw-w64 \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
