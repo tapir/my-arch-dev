@@ -58,6 +58,7 @@ RUN pacman -Syu --noconfirm && \
         clang \
         vulkan-icd-loader \
         vulkan-tools mesa-utils \
+        vulkan-radeon \
         python-pip && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
