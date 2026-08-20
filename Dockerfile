@@ -43,25 +43,25 @@ RUN pacman -Syu --noconfirm && \
         rsync \
         bc \
         ncurses \
-        python \
         dtc \
+        tzdata \
+        sqlite \
+        wl-clipboard \
         swig \
+        uv \
+        python \
+        python-pip \
         python-setuptools \
         python-pyelftools \
-        tzdata \
-        godot \
-        sqlite \
-        blender \
-        wl-clipboard \
-        uv \
-        cppcheck \
-        clang \
         vulkan-icd-loader \
         vulkan-tools mesa-utils \
         vulkan-radeon \
+        blender \
+        godot \
         scons \
-        mingw-w64 \
-        python-pip && \
+        cppcheck \
+        clang \
+        mingw-w64 && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
 
@@ -75,9 +75,10 @@ WORKDIR /home/builder
 
 RUN yay -S --noconfirm --answerdiff None --answerclean None \
         crush-bin \
-        rtk \
-        playwright-cli \
-        tern && \
+        codegraph-bin \
+        pi-coding-agent-bin \
+        rtk-bin \
+        playwright-cli && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
 
