@@ -65,6 +65,8 @@ RUN pacman -Syu --noconfirm && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
 
+RUN npm install -g @agegr/pi-web@latest
+
 COPY --from=yay-builder /usr/bin/yay /usr/bin/yay
 
 RUN useradd -m builder && \
