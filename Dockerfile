@@ -57,6 +57,9 @@ RUN pacman -Syu --noconfirm && \
         vulkan-tools mesa-utils \
         vulkan-radeon \
         blender \
+        rust \
+        rust-src \
+        rust-analyzer \
         godot \
         scons \
         cppcheck \
