@@ -81,6 +81,7 @@ WORKDIR /home/builder
 RUN yay -S --noconfirm --answerdiff None --answerclean None \
         crush-bin \
         codegraph-bin \
+        headroom-ai-bin \
         pi-coding-agent-bin \
         rtk-bin \
         playwright-cli && \
