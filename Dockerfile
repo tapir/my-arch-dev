@@ -51,6 +51,7 @@ RUN pacman -Syu --noconfirm && \
         uv \
         python \
         python-pip \
+        python-pipx \
         python-setuptools \
         python-pyelftools \
         vulkan-icd-loader \
@@ -70,6 +71,10 @@ RUN pacman -Syu --noconfirm && \
 
 RUN npm install -g @agegr/pi-web@latest
 
+ENV PIPX_HOME=/opt/pipx
+ENV PIPX_BIN_DIR=/usr/local/bin
+RUN pipx install "headroom-ai[all]"
+
 COPY --from=yay-builder /usr/bin/yay /usr/bin/yay
 
 RUN useradd -m builder && \
@@ -81,7 +86,6 @@ WORKDIR /home/builder
 RUN yay -S --noconfirm --answerdiff None --answerclean None \
         crush-bin \
         codegraph-bin \
-        headroom-ai \
         pi-coding-agent-bin \
         rtk-bin \
         playwright-cli && \
