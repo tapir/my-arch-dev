@@ -65,6 +65,7 @@ RUN pacman -Syu --noconfirm && \
         scons \
         cppcheck \
         clang \
+        upx \
         mingw-w64 && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
