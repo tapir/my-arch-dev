@@ -66,7 +66,8 @@ RUN pacman -Syu --noconfirm && \
         cppcheck \
         clang \
         upx \
-        mingw-w64 && \
+        mingw-w64 \
+        jdk21-openjdk && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
 
@@ -89,6 +90,13 @@ RUN yay -S --noconfirm --answerdiff None --answerclean None \
         codegraph-bin \
         pi-coding-agent-bin \
         rtk-bin \
+        android-sdk-cmdline-tools-latest \
+        android-sdk-platform-tools \
+        android-sdk-build-tools-35 \
+        android-sdk-build-tools \
+        android-platform-36 \
+        android-emulator \
+        android-google-apis-x86-64-system-image \
         playwright-cli && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
