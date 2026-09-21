@@ -67,6 +67,8 @@ RUN pacman -Syu --noconfirm && \
         clang \
         upx \
         mingw-w64 \
+        ffmpeg \
+        jq \
         jdk21-openjdk && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
