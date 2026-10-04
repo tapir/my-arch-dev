@@ -52,16 +52,15 @@ RUN pacman -Syu --noconfirm && \
         upx \
         mingw-w64 \
         ffmpeg \
-        jq \
-        jdk21-openjdk && \
+        jq && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
 
-RUN npm install -g @agegr/pi-web@latest
+#RUN npm install -g @agegr/pi-web@latest
 
-ENV PIPX_HOME=/opt/pipx
-ENV PIPX_BIN_DIR=/usr/local/bin
-RUN pipx install "headroom-ai[all]"
+#ENV PIPX_HOME=/opt/pipx
+#ENV PIPX_BIN_DIR=/usr/local/bin
+#RUN pipx install "headroom-ai[all]"
 
 COPY --from=yay-builder /usr/bin/yay /usr/bin/yay
 
@@ -76,13 +75,6 @@ RUN yay -S --noconfirm --answerdiff None --answerclean None \
         codegraph-bin \
         pi-coding-agent-bin \
         rtk-bin \
-        android-sdk-cmdline-tools-latest \
-        android-sdk-platform-tools \
-        android-sdk-build-tools-35 \
-        android-sdk-build-tools \
-        android-platform-36 \
-        android-emulator \
-        android-google-apis-x86-64-system-image \
         playwright-cli && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
