@@ -27,27 +27,15 @@ RUN pacman -Syu --noconfirm && \
         go \
         nodejs \
         npm \
-        pnpm \
-        yarn \
         nano \
         git \
         curl \
         wget \
-        procps-ng \
-        util-linux \
         sqlc \
-        gopls\
-        typescript-language-server \
-        cpio \
         unzip \
         rsync \
-        bc \
-        ncurses \
-        dtc \
-        tzdata \
         sqlite \
         wl-clipboard \
-        swig \
         uv \
         python \
         python-pip \
@@ -57,10 +45,6 @@ RUN pacman -Syu --noconfirm && \
         vulkan-icd-loader \
         vulkan-tools mesa-utils \
         vulkan-radeon \
-        blender \
-        rust \
-        rust-src \
-        rust-analyzer \
         godot \
         scons \
         cppcheck \
