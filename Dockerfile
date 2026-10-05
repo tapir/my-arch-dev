@@ -52,6 +52,7 @@ RUN pacman -Syu --noconfirm && \
         upx \
         mingw-w64 \
         ffmpeg \
+        github-cli \
         jq && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
@@ -75,6 +76,7 @@ RUN yay -S --noconfirm --answerdiff None --answerclean None \
         codegraph-bin \
         pi-coding-agent-bin \
         rtk-bin \
+        google-cloud-cli \
         playwright-cli && \
     yay -Scc --noconfirm && \
     rm -rf /home/builder/.cache/yay
