@@ -49,7 +49,6 @@ RUN pacman -Syu --noconfirm && \
         github-cli \
         jq \
         wine \
-        ttf-ms-fonts \
         ghidra && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
@@ -65,6 +64,7 @@ USER builder
 WORKDIR /home/builder
 
 RUN yay -S --noconfirm --answerdiff None --answerclean None \
+        ttf-ms-fonts \
         codegraph-bin \
         pi-coding-agent-bin \
         rtk-bin && \
