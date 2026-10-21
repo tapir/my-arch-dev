@@ -49,6 +49,7 @@ RUN pacman -Syu --noconfirm && \
         github-cli \
         jq \
         wine \
+        ttf-ms-fonts \
         ghidra && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
