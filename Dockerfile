@@ -36,9 +36,6 @@ RUN pacman -Syu --noconfirm && \
         rsync \
         sqlite \
         wl-clipboard \
-        uv \
-        python \
-        python-pipx \
         vulkan-icd-loader \
         vulkan-tools mesa-utils \
         vulkan-radeon \
@@ -50,9 +47,13 @@ RUN pacman -Syu --noconfirm && \
         mingw-w64 \
         ffmpeg \
         github-cli \
-        jq && \
+        jq \
+        wine \
+        ghidra && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
+
+RUN npm install -g rea-agents
 
 COPY --from=yay-builder /usr/bin/yay /usr/bin/yay
 
