@@ -49,11 +49,13 @@ RUN pacman -Syu --noconfirm && \
         github-cli \
         jq \
         wine \
-        ghidra && \
+        ghidra \
+        libxtst \
+        ttf-dejavu && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
 
-RUN npm install -g rea-agents
+#RUN npm install -g rea-agents
 
 COPY --from=yay-builder /usr/bin/yay /usr/bin/yay
 
