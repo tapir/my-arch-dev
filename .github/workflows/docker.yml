@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - main
+  schedule:
+    # off-peak; :17 dodges the on-the-hour runner crunch
+    - cron: "17 3 * * *"
   workflow_dispatch:
 
 jobs:
