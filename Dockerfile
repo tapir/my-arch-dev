@@ -23,40 +23,17 @@ FROM archlinux:latest
 
 RUN pacman -Syu --noconfirm && \
     pacman -S --noconfirm \
-        base-devel \
-        go \
-        nodejs \
-        npm \
-        nano \
-        git \
-        curl \
-        wget \
-        sqlc \
-        unzip \
-        rsync \
-        sqlite \
-        wl-clipboard \
-        vulkan-icd-loader \
-        vulkan-tools mesa-utils \
-        vulkan-radeon \
-        godot \
-        scons \
-        cppcheck \
-        clang \
-        upx \
-        mingw-w64 \
-        ffmpeg \
-        github-cli \
-        jq \
-        wine \
-        ghidra \
-        valgrind \
-        libxtst \
-        ttf-dejavu && \
+        base-devel git github-cli \
+        cppcheck clang mingw-w64 \
+        go sqlc \
+        nodejs npm \
+        python python-pip \
+        nano curl wget rsync unzip wl-clipboard sqlite upx ffmpeg jq \
+        vulkan-icd-loader vulkan-tools mesa-utils vulkan-radeon \
+        godot scons \
+        wine ghidra valgrind libxtst ttf-dejavu \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
-
-#RUN npm install -g rea-agents
 
 COPY --from=yay-builder /usr/bin/yay /usr/bin/yay
 
