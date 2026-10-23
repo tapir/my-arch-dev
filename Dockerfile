@@ -31,7 +31,7 @@ RUN pacman -Syu --noconfirm && \
         nano curl wget rsync unzip wl-clipboard sqlite upx ffmpeg jq \
         vulkan-icd-loader vulkan-tools mesa-utils vulkan-radeon \
         godot scons \
-        wine ghidra valgrind libxtst ttf-dejavu \
+        wine ghidra valgrind libxtst ttf-dejavu && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
 
