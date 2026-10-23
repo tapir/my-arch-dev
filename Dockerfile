@@ -50,6 +50,7 @@ RUN pacman -Syu --noconfirm && \
         jq \
         wine \
         ghidra \
+        valgrind \
         libxtst \
         ttf-dejavu && \
     pacman -Scc --noconfirm && \
