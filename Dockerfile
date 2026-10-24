@@ -26,7 +26,7 @@ RUN pacman -Syu --noconfirm && \
         base-devel git github-cli \
         cppcheck clang mingw-w64 \
         go sqlc \
-        nodejs npm npx \
+        nodejs npm \
         python python-pipx python-pip \
         nano curl wget rsync unzip wl-clipboard sqlite upx ffmpeg jq \
         vulkan-icd-loader vulkan-tools mesa-utils vulkan-radeon \
