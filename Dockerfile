@@ -30,7 +30,7 @@ RUN pacman -Syu --noconfirm && \
         python python-pipx python-pip \
         nano curl wget rsync unzip wl-clipboard sqlite upx ffmpeg jq \
         vulkan-icd-loader vulkan-tools mesa-utils vulkan-radeon \
-        wine ghidra valgrind libxtst ttf-dejavu && \
+        wine ghidra valgrind libxtst ttf-dejavu \
         aws-cli-v2 google-cloud-cli && \
     pacman -Scc --noconfirm && \
     rm -rf /var/cache/pacman/pkg/*
